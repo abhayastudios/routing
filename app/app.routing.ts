@@ -17,9 +17,9 @@ const routes: Routes = [
       { path: "loginchild", component: LoginChild },
     ]
   },
-  { path: "app", component: AppComponent,
+  { path: "main", component: AppComponent,
     children: [
-      { path: "main", component: MainParent,
+      { path: "", component: MainParent,
         children: [
           { path: "", redirectTo: "mainchild", pathMatch: "full" },
           { path: "mainchild", component: MainChild },
