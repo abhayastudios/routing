@@ -19,6 +19,6 @@ export class MainChild implements OnInit {
   public ngOnInit() {}
 
   public main() {
-    this.router.navigate(['/main/otherchild']);
+    this.router.navigate(['/app/main/otherchild']);
   }
 }

@@ -19,7 +19,7 @@ export class LoginChild implements OnInit {
   public ngOnInit() {}
 
   public main() {
-    // this.router.navigate(['/main'],{ clearHistory: true });
-    this.router.navigate(['/main']);
+    this.router.navigate(['/app/main'],{ clearHistory: true });
+    // this.router.navigate(['/app/main']);
   }
 }

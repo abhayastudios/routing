@@ -4,6 +4,7 @@ import { Routes } from "@angular/router";
 
 import { LoginParent } from './login.parent';
 import { LoginChild } from './login.child';
+import { AppComponent } from './app.component';
 import { MainParent } from './main.parent';
 import { MainChild } from './main.child';
 import { OtherChild } from './other.child';
@@ -16,11 +17,15 @@ const routes: Routes = [
       { path: "loginchild", component: LoginChild },
     ]
   },
-  { path: "main", component: MainParent,
+  { path: "app", component: AppComponent,
     children: [
-      { path: "", redirectTo: "mainchild", pathMatch: "full" },
-      { path: "mainchild", component: MainChild },
-      { path: "otherchild", component: OtherChild },
+      { path: "main", component: MainParent,
+        children: [
+          { path: "", redirectTo: "mainchild", pathMatch: "full" },
+          { path: "mainchild", component: MainChild },
+          { path: "otherchild", component: OtherChild },
+        ]
+      }
     ]
   }
 ];
