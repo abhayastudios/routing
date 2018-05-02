@@ -1,5 +1,6 @@
 import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptModule } from "nativescript-angular/nativescript.module";
+import { NativeScriptAnimationsModule } from "nativescript-angular/animations";
 import { AppRoutingModule } from "./app.routing";
 import { AppComponent } from "./app.component";
 
@@ -8,6 +9,11 @@ import { LoginChild } from './login.child';
 import { MainParent } from './main.parent';
 import { MainChild } from './main.child';
 import { OtherChild } from './other.child';
+
+// import { animationsTraceCategory } from "nativescript-angular/trace";
+// import { setCategories, enable } from "trace";
+// setCategories(animationsTraceCategory);
+// enable();
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
 // import { NativeScriptFormsModule } from "nativescript-angular/forms";
@@ -21,6 +27,7 @@ import { OtherChild } from './other.child';
     ],
     imports: [
         NativeScriptModule,
+        NativeScriptAnimationsModule,
         AppRoutingModule
     ],
     declarations: [

@@ -22,8 +22,8 @@ const routes: Routes = [
       { path: "", component: MainParent,
         children: [
           { path: "", redirectTo: "mainchild", pathMatch: "full" },
-          { path: "mainchild", component: MainChild },
-          { path: "otherchild", component: OtherChild },
+          { path: "mainchild", component: MainChild, data: { animation: 'main' } },
+          { path: "otherchild", component: OtherChild, data: { animation: 'other' } },
         ]
       }
     ]
